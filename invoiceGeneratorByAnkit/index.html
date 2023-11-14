@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add the html2pdf library -->
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <!-- Add the qrcode library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="mainForm" id="downloadPDF">
+        <div class="row">
+          <div class="card1" id="card1">
+            <div class="dateInvoice">
+              <div class="dateSection">
+                <div class="currentDate">
+                  <h4 id="curnDate">Current Date</h4>
+                </div>
+                <div class="dueDate">
+                  <label for="datePicker">Due Date: </label>
+                  <input type="date" id="datePicker" name="datePicker" />
+                </div>
+              </div>
+              <div class="invoiceNumber">
+                <h4 id="invoiceNum">Invoice Number:</h4>
+              </div>
+            </div>
+            <div class="billSection">
+              <div class="billTo">
+                <h4>Bill To:</h4>
+                <input
+                  type="text"
+                  placeholder="Who is this invoice to?"
+                  id="billToName"
+                />
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  id="billToEmail"
+                />
+                <input
+                  type="text"
+                  placeholder="Billing Address"
+                  id="billToAddress"
+                />
+              </div>
+              <div class="billFrom">
+                <h4>Bill From:</h4>
+                <input
+                  type="text"
+                  placeholder="Who is this invoice From?"
+                  id="billFromName"
+                />
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  id="billFromEmail"
+                />
+                <input
+                  type="text"
+                  placeholder="Billing Address"
+                  id="billFromAddress"
+                />
+              </div>
+            </div>
+            <div class="section">
+              <h2>Bill Details</h2>
+              <table id="billTable">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Bill details will be added dynamically here -->
+                </tbody>
+              </table>
+              <button onclick="addItem()">Add Item</button>
+            </div>
+
+            <div class="section">
+              <h2>Total</h2>
+              <p>Total Items: <span id="totalItems">0</span></p>
+              <p>Total Amount: $<span id="totalAmount">0</span></p>
+            </div>
+
+            <div class="section">
+              <h2>Notes</h2>
+              <textarea id="notes"></textarea>
+            </div>
+          </div>
+          <div class="card2">
+            <button
+              class="reviewInvoice"
+              onclick="reviewInvoice(event)"
+              id="reviewInvoiceButton"
+            >
+              Review Invoice
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Invoice Options</h2>
+        <button onclick="viewBill()">View Bill</button>
+        <button onclick="downloadBill()">Download Bill</button>
+        <button onclick="generateQRCode()">QR Code</button>
+        <div id="billContent" style="display: none"></div>
+        <div id="downloadContent" style="display: none"></div>
+        <div id="qrCodeContent" style="display: none"></div>
+        <div id="qrcode" style="display: none"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
