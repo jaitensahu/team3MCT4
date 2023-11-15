@@ -38,6 +38,7 @@ function addItem() {
 function deleteItem(button) {
   const row = button.parentNode.parentNode;
   row.parentNode.removeChild(row);
+  calculateTotal();
 }
 
 function calculateTotal() {
@@ -107,27 +108,33 @@ function viewBill() {
 function generateBillContent() {
   const billDetails = `
     Invoice Details:
+    <br/>
     Date: ${formattedDate}
-    Due Date: ${document.getElementById("datePicker").value}
+    <br/>
+    Due Date: <p style = "color:red;display:inline"> ${document.getElementById("datePicker").value}</p>
+    <br/>
     Invoice Number: ${invnum}
+    <br/>
 
     Bill Contact Details:
+    <br/>
     Bill To:
-      Name: ${document.getElementById("billToName").value}
-      Email: ${document.getElementById("billToEmail").value}
-      Address: ${document.getElementById("billToAddress").value}
+    <br/>
+      Name: ${document.getElementById("billToName").value}<br/>
+      Email: ${document.getElementById("billToEmail").value}<br/>
+      Address: ${document.getElementById("billToAddress").value}<br/>
 
-    Bill From:
-      Name: ${document.getElementById("billFromName").value}
-      Email: ${document.getElementById("billFromEmail").value}
-      Address: ${document.getElementById("billFromAddress").value}
+    Bill From:<br/>
+      Name: ${document.getElementById("billFromName").value}<br/>
+      Email: ${document.getElementById("billFromEmail").value}<br/>
+      Address: ${document.getElementById("billFromAddress").value}<br/>
 
-    Bill Details:
-    Total Items: ${document.getElementById("totalItems").innerText}
-    Total Amount: $${document.getElementById("totalAmount").innerText}
+    Bill Details:<br/>
+    Total Items: ${document.getElementById("totalItems").innerText}<br/>
+    Total Amount: $${document.getElementById("totalAmount").innerText}<br/>
 
-    Notes:
-    ${document.getElementById("notes").value}
+    Notes:<br/>
+    ${document.getElementById("notes").value}<br/>
     `;
 
   return billDetails;
@@ -219,11 +226,19 @@ function generateQRCodeWithQrcode() {
   const qrCodeContainer = document.getElementById("qrcode");
   qrCodeContainer.innerHTML = ""; // Clear previous QR code
 
-  const qrcode = new QRCode(qrCodeContainer, {
-    text: content,
-    width: 128,
-    height: 128,
-  });
+  // const qrcode = new QRCode(qrCodeContainer, {
+  //   text: content,
+  //   width: 128,
+  //   height: 128,
+  // });
+
+  const qrURL = "https://quickchart.io/qr?text=" + content;
+    var img=new Image();
+    img.src = qrURL;
+    img.width=128;
+    img.height=128;
+    document.querySelector("#qrcode").appendChild(img);
+  // console.log(repspone);
 
   // Display the QR code
   qrCodeContainer.style.display = "block";
