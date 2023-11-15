@@ -1,29 +1,30 @@
-let i=1;
+let i=0;
+document.addEventListener("DOMContentLoaded", () => {
+// console.log("hii",i++);
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+   
+    if (tabs[0].url && tabs[0].url.includes("youtube.com/watch")) {
+      const urlparams = new URLSearchParams(new URL(tabs[0].url).search);
+      
+      const videoId = urlparams.get("v");
+     
+      chrome.storage.sync.get([videoId], (result) => {
+        let dataArray=JSON.parse(result[videoId]);
+        console.log("dataArray=",dataArray);
 
+        dataArray.forEach(element => {
+          let para=document.createElement("p");
+          para.innerText=element.desc;
+          document.querySelector(".timeStamp").appendChild(para)
+        });
 
+      });
+    } else {
+      document.querySelector(".timeStamp").innerHTML =
+        "<p>Galat Jagah pe Aagye ho tum</p>";
+    }
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log(message.videoId)
-    chrome.storage.local.get(message.videoId, (result) => {
-        if (Object.keys(result).includes(message.videoId) ){
-          console.log(`Key '${message.videoId}' exists in Chrome Storage.`);
-          // Perform actions if the key exists
-        } else {
-          console.log(`Key '${message.videoId}' does not exist in Chrome Storage.`);
-          // Perform actions if the key does not exist
+    
 
-            let key=message.videoId;
-            console.log("hii",key);
-          chrome.storage.local.set({ key : 'value' }, () => {
-            console.log('Data stored locally.');
-          });
-        }
-      });  
-
-    let timeStamp_container=document.querySelector(".timeStamp")
-    let para=document.createElement("p");
-    para.innerHTML=`TimeStamp${i++}${message.timestamp}`
-    timeStamp_container.appendChild(para);
-
-})
-  
+  });
+});
