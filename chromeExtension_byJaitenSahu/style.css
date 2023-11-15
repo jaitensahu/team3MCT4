@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    width: 200px;
+    text-align: center;
+}
+/* .customIcon{
+    width: 20px;
+      height: 20px;
+      background-color: black;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px; 
+      cursor: pointer; 
+} */
