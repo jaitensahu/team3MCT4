@@ -1,162 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Serif:opsz@8..144&display=swap');
-*{
+
+* {
     text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Serif', serif;
 }
-.navbar{
-    background: crimson; 
-    font-family: calibri; 
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: crimson;
+    font-family: 'Poppins', sans-serif;
     padding-right: 15px;
     padding-left: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
-.navdiv{
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 60px;
     padding-bottom: 10px;
 }
-.logo a{
-    font-size: 25px; 
-    font-weight: 200px; 
+
+.logo a {
+    font-size: 25px;
+    font-weight: bold;
     color: white;
-    padding-left: 35px;  
+    padding-left: 35px;
 }
-li{
-    list-style: none; 
-    display: inline-block;
-}
-li a{
-    color: white; 
-    font-size: 18px; 
-    font-weight: bold; 
-    margin-right: 25px;
+
+nav ul {
+    list-style: none;
     display: flex;
-    padding-right: 30px;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
-button{
-    background-color: white; 
-    
-    margin-left: 10px; 
-    border-radius: 10px; 
-    padding: 10px; 
+
+nav li {
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+nav button {
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
     width: 126px;
 }
-button a{
-    color: black; 
-    font-weight: bold; 
+
+nav button a {
+    color: black;
+    font-weight: bold;
     font-size: 15px;
 }
 
-.img{
+.img {
     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220212/pngtree-dynamic-team-of-professionals-organizing-clothing-donations-in-a-box-with-creativity-photo-image_29409862.jpg");
-    background-size: cover; 
-     background-position: center;
-     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-/* .donation{
-    background-color: darkblue;
-    padding-top: 6rem;
-}
-.donation .humanity{
-    color: orangered;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
-    display: block;
 }
-.donation-list{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding: 2rem 10vw;
-    align-items: start;
-    /* margin-bottom: 100px; */
-/* }
-.donation-list .list{
-    width: 30%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    border: 1px solid rgb(226, 216, 216);
-    border-radius: 5px;
-}  */
 
-.services{
+.services {
     background-color: #FBFBFB;
     padding-top: 6rem;
 }
-.services .service{
-    color: #14BF98;
-    text-align: center;
-    display: block;
-}
-.services h1{
+
+.services h1 {
     text-align: center;
     color: darkorange;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
-.service-list-container{
+
+.service-list-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem 10vw;
-    align-items: start;
-    margin-bottom: 100px;
-    
+    padding: 2rem;
+    align-items: center;
 }
-.services .service-list-container .item{
-    width: 30%;
-    flex-grow: 0;
-    flex-shrink: 0;
+
+.services .item {
+    width: 45%;
+    margin: 1rem;
     border: 1px solid rgb(226, 216, 216);
     border-radius: 20px;
-    /* border-color: black; */
+    overflow: hidden;
+    transition: transform 0.3s;
 }
-.services .item img{
+
+.services .item:hover {
+    transform: scale(1.05);
+}
+
+.services .item img {
     width: 100%;
     height: 12rem;
     object-fit: cover;
     object-position: center;
     border-radius: 5px 5px 0 0;
-    border-color: wheat;
 }
-.services .item ul{
+
+.services .item ul {
     line-height: 2rem;
     list-style-type: none;
     padding: 0.5rem 2rem;
     color: gray;
 }
-.services .item ul li::before{
+
+.services .item ul li::before {
     content: '\25A0';
     color: #14BF98;
     margin-right: 5px;
     font-size: 1rem;
 }
-.services .item h4{
+
+.services .item h4 {
     text-align: center;
     font-size: 1.5rem;
     color: #484A46;
     padding: 1rem 0;
 }
-.services .item p{
+
+.services .item p {
     line-height: 1.5rem;
     padding: 0.5rem 2rem;
     color: gray;
 }
-.services .item h6{
+
+.services .item h6 {
     font-size: 1rem;
     text-align: center;
     padding: 0.5rem 2rem;
 }
-.services h6 .price{
+
+.services h6 .price {
     color: #14BF98;
 }
-.item button{
+
+.services .item button {
     cursor: pointer;
     background-color: #14BF98;
     text-transform: uppercase;
@@ -164,56 +171,54 @@ button a{
     border-radius: 5px;
     color: white;
     border: 1px solid #14BF98;
-    transition: all 0.125s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.item button{
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,50%);
-}
-.item button:hover{
+
+.services .item button:hover {
     background-color: white;
     color: #14BF98;
 }
-footer{
-    padding: 5rem 13rem;
+
+footer {
+    padding: 5rem 2rem;
     background-color: #113448;
 }
-.footer-sec{
+
+.footer-sec {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     color: white;
-    /* align-items: center; */
-    gap: 4rem;
 }
-.footer-sec .footer-item.words{
+
+.footer-sec .footer-item.words {
     width: 45%;
-    flex-grow: 0;
-    flex-shrink: 0;
 }
-.footer-sec .footer-item{
+
+.footer-sec .footer-item {
     width: 15%;
-    flex-grow: 0;
-    flex-shrink: 0;
 }
-.footer-sec ul{
+
+.footer-sec ul {
     list-style: none;
     text-decoration: underline;
     cursor: pointer;
 }
-.footer-sec ul,.footer-sec p{
+
+.footer-sec ul,
+.footer-sec p {
     line-height: 1.5rem;
     font-size: 14px;
     font-weight: 100;
     color: #cacfc1;
 }
-.footer-sec h3{
+
+.footer-sec h3 {
     font-weight: 800;
     line-height: 1.2rem;
 }
-footer .copyright{
+
+footer .copyright {
     padding-top: 5rem;
     color: white;
     text-align: center;
@@ -221,13 +226,95 @@ footer .copyright{
     color: #cacfc1;
     font-size: 15px;
 }
-.logo-1{
+
+.logo-1 {
     width: 105px;
     border-radius: 50%;
 }
-.email .email-us{
+
+.email .email-us {
     color: white;
 }
-.spark{
-    display: inline;
+
+.dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+dialog {
+    max-width: 500px;
+    border: none;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#open, #close {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#open:hover, #close:hover {
+    background-color: lightgreen;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: crimson;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
