@@ -14,13 +14,15 @@
     <div class="container">
       <form class="mainForm" id="downloadPDF">
         <div class="row">
-          <div class="card1" id="card1">
+          <!-- <div class="card1" id="card1"> -->
+            <fieldset class="card1" id="card1">
+              <legend>Invoice Details</legend>
             <div class="dateInvoice">
               <div class="dateSection">
                 <div class="currentDate">
                   <h4 id="curnDate">Current Date</h4>
                 </div>
-                <div class="dueDate">
+                <div class="dueDate section">
                   <label for="datePicker">Due Date: </label>
                   <input type="date" id="datePicker" name="datePicker" />
                 </div>
@@ -29,7 +31,8 @@
                 <h4 id="invoiceNum">Invoice Number:</h4>
               </div>
             </div>
-            <div class="billSection">
+            <br><br>
+            <div class="billSection section">
               <div class="billTo">
                 <h4>Bill To:</h4>
                 <input
@@ -66,6 +69,7 @@
                   id="billFromAddress"
                 />
               </div>
+              
             </div>
             <div class="section">
               <h2>Bill Details</h2>
@@ -82,20 +86,21 @@
                   <!-- Bill details will be added dynamically here -->
                 </tbody>
               </table>
+              <br><br>
               <button onclick="addItem()">Add Item</button>
             </div>
 
-            <div class="section">
+            <div class="section total-section">
               <h2>Total</h2>
               <p>Total Items: <span id="totalItems">0</span></p>
-              <p>Total Amount: $<span id="totalAmount">0</span></p>
+              <p>Total Amount: ₹ <span id="totalAmount">0</span></p>
             </div>
 
             <div class="section">
               <h2>Notes</h2>
               <textarea id="notes"></textarea>
             </div>
-          </div>
+            </fieldset>
           <div class="card2">
             <button
               class="reviewInvoice"
