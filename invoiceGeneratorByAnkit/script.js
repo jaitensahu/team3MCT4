@@ -131,7 +131,7 @@ function generateBillContent() {
 
     Bill Details:<br/>
     Total Items: ${document.getElementById("totalItems").innerText}<br/>
-    Total Amount: $${document.getElementById("totalAmount").innerText}<br/>
+    Total Amount: ₹ ${document.getElementById("totalAmount").innerText}<br/>
 
     Notes:<br/>
     ${document.getElementById("notes").value}<br/>
@@ -172,7 +172,7 @@ function generateDownloadContent() {
 
   Bill Details:
   Total Items: ${document.getElementById("totalItems").innerText}
-  Total Amount: $${document.getElementById("totalAmount").innerText}
+  Total Amount: ₹ ${document.getElementById("totalAmount").innerText}
 
   Notes:
   ${document.getElementById("notes").value}
@@ -219,7 +219,7 @@ function generateQRCodeWithQrcode() {
   
     
     Total Items: ${document.getElementById("totalItems").innerText}
-    Total Amount: $${document.getElementById("totalAmount").innerText}
+    Total Amount: ₹ ${document.getElementById("totalAmount").innerText}
     `;
   console.log(content);
 
