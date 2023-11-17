@@ -1,11 +1,12 @@
-let currentVideoBookmark=[];
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+let currentVideoBookmark = [];
+chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+  if(message.type=="type1"){
   const controls = document.querySelector(".ytp-right-controls");
-  let  data = updateBookmark();
+
   let btnn = document.querySelector(".costumbtn");
   if (!btnn) {
     let bookmarkBtn = document.createElement("img");
-    bookmarkBtn.src = chrome.runtime.getURL("./download (1).png");
+    bookmarkBtn.src = chrome.runtime.getURL("/download (1).png");
     const btn = document.createElement("button");
     btn.classList.add("ytp-button");
     btn.classList.add("costumbtn");
@@ -13,25 +14,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     controls.appendChild(btn);
     btnn = document.querySelector(".costumbtn");
 
-    btnn.addEventListener("click", () => {
-      updateBookmark();
-      // console.log("currentBookmark=",currentVideoBookmark);
+    btnn.addEventListener("click", async () => {
+      currentVideoBookmark = await updateBookmark();
       const videoPlayer = document.querySelector("video");
       const timeStamp = Math.floor(videoPlayer.currentTime);
       let time_in_hr = convertSectoHr(timeStamp);
 
       let newBookMark = {
         current_Time: timeStamp,
-        desc: "bookmark at" + " " + time_in_hr,
+        desc: "Bookmark At" + " " + time_in_hr,
       };
 
-
-
-      
       let key = message.videoId;
 
+      console.log("current1=", currentVideoBookmark);
 
-      // 1 2 3 4 5
       chrome.storage.sync
         .set({
           [key]: JSON.stringify([...currentVideoBookmark, newBookMark]),
@@ -41,32 +38,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         });
     });
   }
-    data = updateBookmark();
 
-function updateBookmark() {
-  return new Promise((resolve, reject) => {
-    chrome.storage.sync.get([message.videoId], (result) => {
-      let dataArray = result[message.videoId] ? JSON.parse(result[message.videoId]) : [];
-      console.log("dataArray =", dataArray);
-      resolve(dataArray);
+  currentVideoBookmark = await updateBookmark();
+
+  function updateBookmark() {
+    return new Promise((resolve, reject) => {
+      chrome.storage.sync.get([message.videoId], (result) => {
+        let dataArray = result[message.videoId]
+          ? JSON.parse(result[message.videoId])
+          : [];
+        resolve(dataArray);
+      });
     });
-  });
+  }
 }
-
-data.then((data2) => {
-  currentVideoBookmark=data2;
-  // This will log the retrieved data once it's available
-}).catch((error) => {
-  console.error(error); // Handle any errors during retrieval
 });
-
-
-});
-
-
-
-
-
 
 function convertSectoHr(timestamp) {
   return (
@@ -79,3 +65,9 @@ function convertSectoHr(timestamp) {
 }
 
 
+chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+  if(message.type=='type2'){
+    console.log("hii you got the message");
+  }
+  console.log("hii you got the message");
+})
