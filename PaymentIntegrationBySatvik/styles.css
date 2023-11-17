@@ -32,6 +32,10 @@ body {
     height: 60px;
     padding-bottom: 10px;
 }
+.nav-items, li, a{
+    padding-top: 9px;
+    
+}
 
 .logo a {
     font-size: 25px;
@@ -75,7 +79,7 @@ nav button a {
 .img {
     background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220212/pngtree-dynamic-team-of-professionals-organizing-clothing-donations-in-a-box-with-creativity-photo-image_29409862.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,6 +87,7 @@ nav button a {
     align-items: center;
     color: white;
     text-align: center;
+    
 }
 
 .services {
@@ -316,5 +321,9 @@ input, textarea {
     nav button {
         width: 100%;
         margin: 10px 0;
+        
+    }
+    .nav-items, button, a{
+        margin-right: 8rem;
     }
 }

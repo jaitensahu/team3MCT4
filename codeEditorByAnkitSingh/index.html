@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Code Editor</title>
+</head>
+<body>
+  <div id="editor-container">
+    <div id="html-container" class="code-container">
+      <div class="code-header">
+        <span>HTML</span>
+        <button onclick="clearCode('html')">Clear</button>
+        <button onclick="copyCode('html')">Copy</button>
+        <button onclick="expandCode('html')">Expand</button>
+        <button onclick="restoreCode('html')">Restore</button>
+      </div>
+      <textarea id="html-code" class="code" oninput="updateOutput()"></textarea>
+    </div>
+
+    <div id="css-container" class="code-container">
+      <div class="code-header">
+        <span>CSS</span>
+        <button onclick="clearCode('css')">Clear</button>
+        <button onclick="copyCode('css')">Copy</button>
+        <button onclick="expandCode('css')">Expand</button>
+        <button onclick="restoreCode('css')">Restore</button>
+      </div>
+      <textarea id="css-code" class="code" oninput="updateOutput()"></textarea>
+    </div>
+
+    <div id="js-container" class="code-container">
+      <div class="code-header">
+        <span>JS</span>
+        <button onclick="clearCode('js')">Clear</button>
+        <button onclick="copyCode('js')">Copy</button>
+        <button onclick="expandCode('js')">Expand</button>
+        <button onclick="restoreCode('js')">Restore</button>
+      </div>
+      <textarea id="js-code" class="code" oninput="updateOutput()"></textarea>
+    </div>
+  </div>
+
+  <div id="output-container">
+    <div class="code-header">
+      <span>Output</span>
+    </div>
+    <iframe id="output"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
