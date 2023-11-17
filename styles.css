@@ -1,3 +1,4 @@
+/* Resetting some default styles for better consistency */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -41,10 +42,14 @@ header {
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    width: 150px;
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 50%; /* Make the image a rounded rectangle */
+    display: block;
+    margin: 0 auto; /* Center the image */
     transition: transform 0.3s ease-in-out;
+    margin-top: 5px;
 }
 
 .card:hover img {
@@ -80,6 +85,7 @@ header {
     background-color: #34495e;
 }
 
+/* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
     .card {
         flex: 0 0 calc(50% - 20px);
