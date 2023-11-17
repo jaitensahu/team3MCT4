@@ -12,22 +12,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     chrome.tabs.sendMessage(tabId, {
       message: "Hello from background!",
       videoId: videoId,
+      type:"type1"
     });
     console.log("Tab id:", videoId);
   }
 });
 
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  const keyToCheck = message.videoId;
-  console.log(keyToCheck);
 
-  chrome.storage.sync.set({ 'key': keyToCheck }).then(() => {
-    console.log("Value is set");
-  });
-  
-  chrome.storage.sync.get(["key"]).then((result) => {
-    console.log("Value currently is " + result.key);
-    console.log(result)
-  });
-});
