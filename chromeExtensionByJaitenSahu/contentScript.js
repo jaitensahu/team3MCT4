@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
   let btnn = document.querySelector(".costumbtn");
   if (!btnn) {
     let bookmarkBtn = document.createElement("img");
-    bookmarkBtn.src = chrome.runtime.getURL("/download (1).png");
+    bookmarkBtn.src = chrome.runtime.getURL("assets/download.png");
     const btn = document.createElement("button");
     btn.classList.add("ytp-button");
     btn.classList.add("costumbtn");
@@ -51,6 +51,11 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
       });
     });
   }
+}else if(message.type=='type2'){
+  console.log("hii you got the message" , message["timeToPlay"]);
+  const videoPlayer = document.querySelector("video");
+  videoPlayer.currentTime=message["timeToPlay"];
+  
 }
 });
 
@@ -63,11 +68,3 @@ function convertSectoHr(timestamp) {
     Math.floor(timestamp % 60)
   );
 }
-
-
-chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
-  if(message.type=='type2'){
-    console.log("hii you got the message");
-  }
-  console.log("hii you got the message");
-})
