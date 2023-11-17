@@ -65,4 +65,24 @@ body{
     font-size: 30px;
     background-color: lightgray;
     border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset{
+    width: 120px;
+    height: 50px;
+    position: relative;
+    bottom: 8.5px;
+    background-color: lightgray;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset:hover{
+    background-color: rgb(248, 76, 76);
+    
 }
