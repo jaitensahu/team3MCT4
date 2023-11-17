@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#editor-container {
+  display: flex;
+  width: 100%;
+}
+
+.code-container {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin: 10px;
+  position: relative;
+}
+
+.code-header {
+  background-color: #f2f2f2;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-header button {
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.code {
+  width: 100%;
+  height: 200px; /* Set your desired fixed height here */
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  overflow: auto; /* Always show the scrollbar */
+}
+
+#output-container {
+  flex: 1;
+  overflow: auto; /* Always show the scrollbar */
+  border: 1px solid #ccc;
+  margin: 10px;
+  position: relative;
+  transition: height 0.3s;
+}
+
+#output {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.code-container.expanded {
+  flex: 2;
+  transition: flex 0.3s;
+}
+
+.code-container .restore-button-visible .code-header button:nth-child(4) {
+  display: inline-block;
+}
+
