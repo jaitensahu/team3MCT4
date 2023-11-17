@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resumebuild</title>
+    <link rel="stylesheet" href="./resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="navbar">
+            <h1>ResumeMaker</h1>
+            <button class="download">Download</button>
+            <!-- <a href="path_to_file" download="purposed_file_name">Download</a> -->
+        </div>
+        <div class="basecontainer">
+            <div class="container2">
+                <!-- <form action=""> -->
+                <div class="form">
+                    <label>Template type</label>
+                    <select name="" id="resumeTpes">
+                        <option value="">TwoColumns</option>
+                        <option value="">Minimalist</option>
+                    </select>
+                    <label for="">Header Color</label>
+                    <input type="color" id="headrcolor" class="coler">
+                    <label for="">Header-Text Color</label>
+                    <input type="color" id="hdtxtcolor" class="coler">
+                    <label>Personal Details</label>
+                    <!-- <input type="file" placeholder="image" class="imgee" id="imginput" accept="image/*">
+                    <img  alt="uploadedimg" id="uploadimg"> -->
+                    <input type="text" placeholder="Name" class="nm">
+                    <input type="text" placeholder="E-mail ID" class="email">
+                    <input type="text" placeholder="Phone" class="num">
+                    <input type="text" placeholder="City, Country" class="cont">
+                    <label>Professional Details</label>
+                    <input type="text" placeholder="Wanted job Title" id="titl">
+                    <textarea name="" placeholder="Professional Summary..." id=""  class="obj" maxlength="100"></textarea>
+                    <input type="text" placeholder="Skills" id="skillNm">
+                    <button class="addEmp">Add Employment</button>
+                    <div class="employments">
+
+                    </div>
+                    <button class="addProj">Add Project</button>
+                    <div class="Projects">
+
+                    </div>
+                    <input type="text" placeholder="Educational Background" class="educate">
+                    <button class="addeducate">Add Education</button>
+                    <div class="EducationDtls">
+
+                    </div>
+                <!-- </form> -->
+                </div>
+            </div>
+            <div class="outputcontainer">
+
+                <div class="outputTypOne">
+                    <div class="header">
+                        <h1 class="name"></h1>
+                        <p class="titl"></p>
+                    </div>
+                    <div class="outputleft">
+                        <div class="contents">
+                            <h3>SKILLS</h3>
+                            <div class="skill">
+                            </div>
+                            <h3>Contact</h3>
+                            <div class="contact">
+                                <h4><i class="fa-solid fa-phone"></i>  <span class="p1"></span></h4>
+                                <h4><i class="fa-regular fa-envelope"></i>  <span class="p2"></span></h4>
+                                <h4><i class="fa-solid fa-location-dot"></i>  <span class="p3"></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outputright">
+                        <h3>SUMMARY</h3>
+                        <ul class="sumry">
+                        </ul>
+                        <!-- <p class="sumry"></p> -->
+                        <h3>PROFESSIONAL EXPERIENCE </h3>
+                        <p></p>
+                        <h3>PROJECT</h3>
+                        <h3>EDUCATION</h3>
+                    </div>
+                </div>
+                <div class="outputTypTwo">
+                    <div class="uppersec">
+                        <div class="uperleft">
+                            <h1 class="name2"></h1>
+                            <p class="titl2"></p>
+                        </div>
+                        <div class="uperright">
+                            <h4><i class="fa-solid fa-phone"></i>  <span class="phon"></span></h4>
+                            <h4><i class="fa-regular fa-envelope"></i>  <span class="envel"></span></h4>
+                            <h4><i class="fa-solid fa-location-dot"></i>  <span class="locat"></span></h4>
+                        </div>
+                    </div>
+                    <div class="bottomsec">
+                        <h3>SUMMARY</h3>
+                        <ul class="summry">
+                        </ul>
+                        <h3>PROFESSIONAL EXPERIENCE </h3>
+                        <p></p>
+                        <h3>PROJECT</h3>
+                        <h3>EDUCATION</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./resume.js"></script>
+</body>
+</html>

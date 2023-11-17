@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Serif:opsz@8..144&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: crimson;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding-bottom: 10px;
+}
+
+.logo a {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding-left: 35px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+nav button {
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 126px;
+}
+
+nav button a {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.img {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220212/pngtree-dynamic-team-of-professionals-organizing-clothing-donations-in-a-box-with-creativity-photo-image_29409862.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.services {
+    background-color: #FBFBFB;
+    padding-top: 6rem;
+}
+
+.services h1 {
+    text-align: center;
+    color: darkorange;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+}
+
+.services .item {
+    width: 45%;
+    margin: 1rem;
+    border: 1px solid rgb(226, 216, 216);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.services .item:hover {
+    transform: scale(1.05);
+}
+
+.services .item img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.services .item ul {
+    line-height: 2rem;
+    list-style-type: none;
+    padding: 0.5rem 2rem;
+    color: gray;
+}
+
+.services .item ul li::before {
+    content: '\25A0';
+    color: #14BF98;
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.services .item h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #484A46;
+    padding: 1rem 0;
+}
+
+.services .item p {
+    line-height: 1.5rem;
+    padding: 0.5rem 2rem;
+    color: gray;
+}
+
+.services .item h6 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+.services h6 .price {
+    color: #14BF98;
+}
+
+.services .item button {
+    cursor: pointer;
+    background-color: #14BF98;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #14BF98;
+    transition: all 0.3s ease-in-out;
+}
+
+.services .item button:hover {
+    background-color: white;
+    color: #14BF98;
+}
+
+footer {
+    padding: 5rem 2rem;
+    background-color: #113448;
+}
+
+.footer-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.footer-sec .footer-item.words {
+    width: 45%;
+}
+
+.footer-sec .footer-item {
+    width: 15%;
+}
+
+.footer-sec ul {
+    list-style: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-sec ul,
+.footer-sec p {
+    line-height: 1.5rem;
+    font-size: 14px;
+    font-weight: 100;
+    color: #cacfc1;
+}
+
+.footer-sec h3 {
+    font-weight: 800;
+    line-height: 1.2rem;
+}
+
+footer .copyright {
+    padding-top: 5rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #cacfc1;
+    font-size: 15px;
+}
+
+.logo-1 {
+    width: 105px;
+    border-radius: 50%;
+}
+
+.email .email-us {
+    color: white;
+}
+
+.dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+dialog {
+    max-width: 500px;
+    border: none;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#open, #close {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#open:hover, #close:hover {
+    background-color: lightgreen;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: crimson;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
