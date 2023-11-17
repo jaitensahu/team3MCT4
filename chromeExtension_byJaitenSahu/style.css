@@ -5,9 +5,21 @@
 }
 
 h3{
-    width: 200px;
+    width: 250px;
     text-align: center;
 }
+
+.bookmark p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.bookmark img{
+    width: 20px;
+}
+.bookmark td img{
+    margin: 5px;
+}
+
 /* .customIcon{
     width: 20px;
       height: 20px;
