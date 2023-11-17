@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "Youtube TimeStamp",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "description": "This Extension Allows You To TimeStamp Any Youtube Videos",
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+
+  "icons": {
+    "16": "./Assets/download.png",
+    "32": "./Assets/download.png",
+    "48": "./Assets/download.png",
+    "128": "./Assets/download.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
