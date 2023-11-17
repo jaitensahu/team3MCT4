@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flipkark </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="navbar">
+
+        <section class="left">
+
+            <div class="logo-container">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                    alt="logo">
+            </div>
+
+            <div class="explore">
+                <a href="#">
+                    <span>Explore</span>
+                    <em id="plus">Plus</em>
+                    <img id="logo"
+                        src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
+                        alt="">
+                </a>
+            </div>
+
+        </section>
+
+        <div class="center">
+            <form action="submit">
+                <input class="search" type="text" placeholder="Search for product,brands and more">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </form>
+            <div>
+                <button>Login</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href=""> Become a Seller</a>
+            <a href="">More</a>
+            <div class="cart">
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+                <a href="">Cart</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="items-collection">
+            <div class="items">
+                <p>Grocery</p>
+            </div>
+            <div class="items">
+                
+                <p>Mobiles</p>
+            </div>
+            <div class="items">
+            
+                <p>Fashion
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </p>
+            </div>
+
+            <div class="items">
+               
+                <p>Electronics <span class="material-symbols-outlined">
+                        expand_more
+                    </span></p>
+            </div>
+            <div class="items">
+                
+                <p>Home & Furniture <span class="material-symbols-outlined">
+                        expand_more
+                    </span></p>
+            </div>
+            <div class="items">
+              
+                <p>Appliances</p>
+            </div>
+            <div class="items">
+                
+                <p>Travel</p>
+            </div>
+            <div class="items">
+                
+                <p>Beauty, Toys & More <span class="material-symbols-outlined">
+                        expand_more
+                    </span></p>
+            </div>
+            <div class="items">
+                <p>Two Wheelers <span class="material-symbols-outlined">
+                        expand_more
+                    </span></p>
+            </div>
+        </section>
+
+        <section class="mainBottom">
+            <!-- <div class="left-main">
+                <h2>Filters</h2>
+                
+                <ul class="category">
+                    <li>Computer</li>
+                    <li>LAptop Accessories</li>
+                    <li>Usb Gadgets</li>
+                </ul>
+
+                <div class="priceRange">
+                    <h4>price</h4>
+                    <input type="range" class="rangeSlider">
+                    <select name="" id="">
+                        <option value="">Min</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">60000+</option>
+                    </select>
+                </div>
+
+                <div class="discount">
+                    <h3>Discount</h3>
+                </div>
+                <div class="offers">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="right-main"></div> -->
+            <section class="main-body-container">
+                <section class="sidebar-divs-container">
+                  <div class="top_product"></div>
+          
+                  <div class="filter">
+                    <div class="filter-basedon">
+                      <h2 class="fliter-heading">filters</h2>
+                    </div>
+          
+                    <!-- ----------price-------------- -->
+                    <div class="flter_price">
+                      <span class="category-price filter-category-head">Price</span>
+                     
+                      <div class="scrollPrice">
+                        <input id="rangePrice" type="range" min="250" max="3000"/>
+                      </div>
+                      <select name="" id="min-price">
+                        <option value="">Min</option>
+                        <option value="250">250</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                      </select>
+                      <span>to</span>
+                      <select name="" id="max-price-contai">
+                        <option value="" id="max-price">3000</option>
+                      </select>
+                    </div>
+          
+                    <!-- --------------disount----------------- -->
+                    <div class="dicount-category">
+                      <span class="filter-category-head">Discount</span>
+                      <article>
+                        <div class="inputs"><input type="checkbox" value="50.0" name="30per"> 50% and more </div>
+                        <div class="inputs"><input type="checkbox" value="40.0"name=30per> 40% and more </div>
+                        <div class="inputs"><input type="checkbox" value="30.0"name=30per> 30% and more </div>
+                        <div class="inputs"><input type="checkbox" value="20.0"name=30per> 20% and more </div>
+                        <div class="inputs"><input type="checkbox" value="10.0"name=30per> 10% and more </div>
+                      </article>
+                    </div>
+          
+                    <div class="flipcart-assured-category">
+                      <div class="fAssured"><input type="checkbox" id="ISflipcartAssured"><img src="./assets/flipcartassured.png" alt="" class="flipcart_assured">
+                    </div>
+                  </div>
+          
+                    
+                    <div class="offers-category">
+                      <span class="filter-category-head">Offers</span>
+                      <article>
+                       <div class="inputsOffer"> 
+                        <input type="checkbox" value="noCostEMI" name="nocostemi" id="noCostEMI">No Cost EMI
+                    </div>
+                        
+                      </article>
+                    </div>
+          
+                    <!-- -----------custoner rating-----------------  -->
+                    <div class="customer-rating-category">
+                      <span class="filter-category-head">Customer Rating</span>
+                      <article>
+                        <div class="Ratinginputs"><input type="checkbox" value="4" name="" id="">4 <i class="fa fa-star" aria-hidden="true"></i> and above</div>
+                        <div class="Ratinginputs"><input type="checkbox" name="" value="3" id="">3 <i class="fa fa-star" aria-hidden="true"></i> and above</div>
+                        <div class="Ratinginputs"><input type="checkbox" name="" value="2" id="">2 <i class="fa fa-star" aria-hidden="true"></i> and above</div>
+                        <div class="Ratinginputs"><input type="checkbox" name="" value="1" id="">1 <i class="fa fa-star" aria-hidden="true"></i> and above</div>
+                      
+                      </article>
+                    </div>
+          
+                  </div>
+                </section>
+          
+          
+          
+          
+                <!-- ---------main content------------- -->
+                <section class="main-content-container">
+                  <div class="home-computers">
+                    <a href="#">Home </a> > <a href="#">Computers</a>
+                    <p>
+                      
+                      
+              
+                    </p>
+                    <div class="sorting-options">
+                      <h2 class="sort-by-name">Computers</h2>
+                      <span>(Showing 1 – 40 products of 78,301 products)</span>
+                      <div class="sort-by">
+                        <span class="sort-by-name">Sort By</span>
+                        <span class="popularity">Popularity</span>
+                        <span class="Low_to_High">Price -- Low to High</span>
+                        <span class="High_to_Low">Price -- High to Low</span>
+                        <span>Newest First</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product"></div>
+        </section>
+    </main>
+
+<script src="script.js"></script>
+</body>
+
+</html>
