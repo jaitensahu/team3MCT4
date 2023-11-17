@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function displayTransactionStatus(response, amountpaid) {
   // Display a dialog on the screen with transaction status
-  var dialogContent = 'Transaction for amount ' + amountpaid + ' is ';
+  var dialogContent = 'Transaction for amount ' + amountpaid/100 + ' is ';
 
   if (response.razorpay_payment_id) {
     dialogContent += 'success!';
