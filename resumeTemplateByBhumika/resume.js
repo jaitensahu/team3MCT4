@@ -28,29 +28,21 @@ let finalesResume = document.querySelector(".outputTypOne");
 let downloadbtn = document.querySelector(".download");
 
 
-let downloadbtn = document.querySelector(".download");
-    downloadbtn.addEventListener("click", function () {
-        const twoColumnsTemplate = document.querySelector('.outputTypOne');
-        const minimalistTemplate = document.querySelector('.outputTypTwo');
-
-        let val;
-        if (resumeTypes.value === "TwoColumns") {
-            val = twoColumnsTemplate;
-        } else if (resumeTypes.value === "Minimalist") {
-            val = minimalistTemplate;
-        }
-
-        if (val) {
-            val.style.width = "100%";
-            val.style.height = "100%";
-            html2pdf(val, {
-                filename: 'resume.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            }).from(val);
-        }
+function downevent(btn2, val) {
+    btn2.addEventListener("click", () => {
+        val.style.width = "100%";
+        val.style.height = "100%";
+        html2pdf(val, {
+            filename: 'resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        }).from(val);
     });
+}
+
+
+downevent(downloadbtn, finalesResume);
 
 
 
