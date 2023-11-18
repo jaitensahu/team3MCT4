@@ -97,26 +97,47 @@ function closeModal() {
 }
 
 function viewBill() {
+
+
   const billContent = generateBillContent();
   toggleVisibility("billContent");
   hideOtherContent("billContent");
-  document.getElementById("billContent").innerHTML = billContent;
+
+  const billContentContainer = document.getElementById("billContent");
+  
+  // Clear previous content
+  billContentContainer.innerHTML = "";
+  // Create a fieldset element
+  const fieldset = document.createElement("fieldset");
+  fieldset.innerHTML = '<legend>Invoice Details</legend>';
+  fieldset.style.border = '1px solid #ddd';
+  fieldset.style.padding = '10px';
+  fieldset.style.borderRadius = '8px';
+
+  // Append the fieldset to the billContent div
+  document.getElementById("billContent").appendChild(fieldset);
+
+  // Append the generated bill content to the fieldset
+  fieldset.innerHTML += billContent;
+
   document.getElementById("billContent").style.display = "block";
   document.getElementById("qrcode").style.display = "none";
 }
 
+
+
 function generateBillContent() {
   const billDetails = `
-    Invoice Details:
+    <strong>Invoice Details:</strong>
     <br/>
     Date: ${formattedDate}
     <br/>
-    Due Date: <p style = "color:red;display:inline"> ${document.getElementById("datePicker").value}</p>
+    Due Date: <span style="color: red;">${document.getElementById("datePicker").value}</span>
     <br/>
     Invoice Number: ${invnum}
     <br/>
 
-    Bill Contact Details:
+    <strong>Bill Contact Details:</strong>
     <br/>
     Bill To:
     <br/>
@@ -129,16 +150,17 @@ function generateBillContent() {
       Email: ${document.getElementById("billFromEmail").value}<br/>
       Address: ${document.getElementById("billFromAddress").value}<br/>
 
-    Bill Details:<br/>
+    <strong>Bill Details:</strong><br/>
     Total Items: ${document.getElementById("totalItems").innerText}<br/>
     Total Amount: ₹ ${document.getElementById("totalAmount").innerText}<br/>
 
-    Notes:<br/>
+    <strong>Notes:</strong><br/>
     ${document.getElementById("notes").value}<br/>
     `;
 
   return billDetails;
 }
+
 
 function downloadBill() {
   const downloadContent = generateDownloadContent();
