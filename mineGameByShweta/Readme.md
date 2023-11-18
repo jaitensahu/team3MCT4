@@ -1,5 +1,7 @@
 **Minesweeper Game**💣
 
+Hosted Link - https://geekathonteam3.netlify.app/minegamebyshweta/
+
 Overview -
 
 Minesweeper is a classic single-player puzzle game that became popular on early Microsoft Windows operating systems. The objective of the game is to clear a rectangular board containing hidden "mines" or bombs without detonating any of them. The board is divided into a grid of cells, and each cell can be in one of three states: revealed, unrevealed, or flagged.
