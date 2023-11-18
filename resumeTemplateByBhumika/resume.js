@@ -42,7 +42,7 @@ function downevent(btn2, val) {
 }
 
 
-//downevent(downloadbtn, finalesResume);
+downevent(downloadbtn, finalesResume);
 
 
 
