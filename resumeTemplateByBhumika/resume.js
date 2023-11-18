@@ -30,8 +30,8 @@ let downloadbtn = document.querySelector(".download");
 
 function downevent(btn2, val) {
     btn2.addEventListener("click", () => {
-        finalesResume.style.width = "100%";
-        finalesResume.style.height = "100%";
+        val.style.width = "100%";
+        val.style.height = "100%";
         html2pdf(val, {
             filename: 'resume.pdf',
             image: { type: 'jpeg', quality: 0.98 },
@@ -41,7 +41,10 @@ function downevent(btn2, val) {
     });
 }
 
-downevent(downloadbtn, results);
+
+downevent(downloadbtn, finalesResume);
+
+
 
 // ---------------------------output fetched-------------------------//
 let newtemp = document.querySelector(".outputTypTwo");

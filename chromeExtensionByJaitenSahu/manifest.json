@@ -22,6 +22,13 @@
     "48": "./Assets/download.png",
     "128": "./Assets/download.png"
   },
+
+  "web_accessible_resource":[
+    {
+      "resources":["Assets/786352.png"]
+    }
+  ],
+
   "action": {
     "default_popup": "popup.html"
   }

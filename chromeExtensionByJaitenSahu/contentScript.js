@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
   let btnn = document.querySelector(".costumbtn");
   if (!btnn) {
     let bookmarkBtn = document.createElement("img");
-    bookmarkBtn.src = chrome.runtime.getURL("assets/download.png");
+    bookmarkBtn.src = chrome.runtime.getURL("Assets/786352.png");
     const btn = document.createElement("button");
     btn.classList.add("ytp-button");
     btn.classList.add("costumbtn");

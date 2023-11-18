@@ -1,24 +1,21 @@
-# Invoice Generator
+# Payment Integration
 
 ## Overview
-
 Enable easy and secure donations to multiple organizations using the Razorpay payment gateway. This seamless solution allows users to contribute to causes they care about, promoting social impact.
 
 ## Features
-
-### 1. Dynamic Bill Details
-
 - **Add payment method:** Users can add required details before going to payment options. 
 
-### 2. Total Section
+### 1. Total Section
 
 - The application aacepts the payment with all the payment methods.
-
-### 3. Responsive Design
+ 
+### 2. Responsive Design
 
 - The application is designed to be responsive across various devices and screen sizes.
 
 ## Hosted Link
+
 
 The project is hosted at [Payment Integration]https://geekathonteam3.netlify.app/paymentintegrationbysatvik/
 
@@ -43,16 +40,13 @@ The project is hosted at [Payment Integration]https://geekathonteam3.netlify.app
 ## What We've Learned
 
 In the course of developing this project, we gained hands-on experience and knowledge in:
-
 - Integrating datepicker functionality
 - Integration with Razorpay API
 - Handling secure online transactions
 - Responsive design with media queries
 
-
 ## Future Scope
-
 This project lays the foundation for further enhancements and features. Future improvements could include:
-
 - Expansion to support more payment gateways
 - Real-time donation tracking and reporting
+- Integration with external payment gateways
