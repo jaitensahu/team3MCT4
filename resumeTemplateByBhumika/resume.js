@@ -42,7 +42,7 @@ function downevent(btn2, val) {
 }
 
 
-downevent(downloadbtn, finalesResume);
+//downevent(downloadbtn, finalesResume);
 
 
 
@@ -126,19 +126,16 @@ obj.addEventListener("input", (e)=>{
 
 let x="true";
 resumeTypes.addEventListener("change",(e)=>{
-    if (resumeTypes.value === "TwoColumns") {
-            x = "true";
-        } else if (resumeTypes.value === "Minimalist") {
-            x = "false";
-        }
     if(x==="true"){
         finalesResume.style.display="none";
         newtemp.style.display = "flex";
+        x="false";
         downevent(downloadbtn, newtemp );
     }
     else{
         finalesResume.style.display="flex";
         newtemp.style.display = "none";
+        x="true";
         downevent(downloadbtn, finalesResume );
     }
 })
