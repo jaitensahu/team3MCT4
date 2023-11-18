@@ -1,4 +1,7 @@
 # Resume Template Website
+## Hosted Link
+
+https://geekathonteam3.netlify.app/resumetemplatebybhumika/
 
 This is a web application that provides users with a customizable resume template. It is built using HTML, CSS, and JavaScript.
 
