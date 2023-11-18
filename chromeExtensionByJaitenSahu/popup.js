@@ -10,10 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("dataArray=", dataArray);
 
         appendData(dataArray, videoId);
+        document.querySelector(".heading").innerText="Bookmarked TimeStamp"
       });
     } else {
-      document.querySelector(".timeStamp").innerHTML =
-        "<p>Galat Jagah pe Aagye ho tum</p>";
+      document.querySelector(".heading").innerHTML =
+        `
+        <p class="Errortext">Not a Youtube Page</p>
+        <img src="./assets/cutie-cat.gif"/>
+
+        `
     }
   });
 });
@@ -40,18 +45,18 @@ function playButton_func(e){
     let newArray = dataArray.filter((element) => {
       return element.desc == targetedEle;
     });
-    console.log("newTime", newArray[0]. current_Time);
+   
 
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
      
       const activeTabId = tabs[0].id;
-      console.log(activeTabId);
-      chrome.tabs.sendMessage(activeTabId, 
-        { type: 'type2', data: 'Type 2 message payload' }
-        );
+
+      chrome.tabs.sendMessage(activeTabId, {
+        message: "Hii",
+        type: "type2", 
+        timeToPlay: newArray[0].current_Time 
+      });
     });
-
-
   })
 }
 
@@ -65,7 +70,7 @@ function deleteButton_func(e) {
     let newArray = dataArray.filter((element) => {
       return element.desc != targetedEle;
     });
-    console.log("newArray", newArray);
+
     chrome.storage.sync
       .set({
         [id]: JSON.stringify([...newArray]),

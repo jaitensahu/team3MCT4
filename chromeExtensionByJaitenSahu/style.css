@@ -20,12 +20,13 @@ h3{
     margin: 5px;
 }
 
-/* .customIcon{
-    width: 20px;
-      height: 20px;
-      background-color: black;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px; 
-      cursor: pointer; 
-} */
+.Errortext{
+    text-align: center;
+}
+.timeStamp{
+    width: 100%;
+    text-align: center;
+}
+.heading img{
+    width: 100px;
+}
