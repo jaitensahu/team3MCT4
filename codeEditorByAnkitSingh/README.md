@@ -54,9 +54,13 @@ This project can be extended with additional features and improvements, such as:
 - Collaborative editing functionality
 - Improved code editor UI/UX
 
+## Hosted Link
+
+The project is hosted on [Code Editor Project By Ankit](https://geekathonteam3.netlify.app/codeeditorbyankitsingh/)
+
 ## Credits
 
-This project was created by [Ankit Singh]. Special thanks to:
+This project was created by Ankit Singh. Special thanks to:
 
 - **Educator:** Akhil Sharma
 - **Mentor:** Geetisha Tandon
