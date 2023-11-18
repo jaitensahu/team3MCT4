@@ -13,16 +13,21 @@
         <div class="navbar">
             <h1>ResumeMaker</h1>
             <button class="download">Download</button>
+            <!-- <a href="path_to_file" download="purposed_file_name">Download</a> -->
         </div>
         <div class="basecontainer">
             <div class="container2">
                 <!-- <form action=""> -->
                 <div class="form">
                     <label>Template type</label>
-                    <select name="" id="resumeTpes">
+                    <!-- <select name="" id="resumeTpes">
                         <option value="">TwoColumns</option>
                         <option value="">Minimalist</option>
-                    </select>
+                    </select> -->
+                    <select name="" id="resumeTypes">
+                        <option value="TwoColumns">TwoColumns</option>
+                        <option value="Minimalist">Minimalist</option>
+                    </select>                    
                     <label for="">Header Color</label>
                     <input type="color" id="headrcolor" class="coler">
                     <label for="">Header-Text Color</label>
@@ -30,6 +35,8 @@
                     <label for="">Background Color</label>
                     <input type="color" id="backcolor" class="coler">
                     <label>Personal Details</label>
+                    <!-- <input type="file" placeholder="image" class="imgee" id="imginput" accept="image/*">
+                    <img  alt="uploadedimg" id="uploadimg"> -->
                     <input type="text" placeholder="Name" class="nm">
                     <input type="text" placeholder="E-mail ID" class="email">
                     <input type="text" placeholder="Phone" class="num">
@@ -39,7 +46,7 @@
                     <textarea name="" placeholder="Professional Summary..." id=""  class="obj" maxlength="100"></textarea>
                     <input type="text" placeholder="Skills" id="skillNm">
                     <button class="addEmp">Add Employment</button>
-                    <div class="employments">
+                    <div class="employments" id="Employ">
 
                     </div>
                     <button class="addProj">Add Project</button>
@@ -58,7 +65,7 @@
 
                 <div class="outputTypOne">
                     <div class="header">
-                        <h1 class="name">Name</h1>
+                        <h1 class="name"></h1>
                         <p class="titl"></p>
                     </div>
                     <div class="outputleft">
@@ -117,13 +124,9 @@
                             
                         </div>
                         <h3>PROJECT</h3>
-                        <div class="ProjectsDetailes">
-                            
-                        </div>
+                        <div class="ProjectsDetails2"></div>
                         <h3>EDUCATION</h3>
-                        <div class="Qualificationes">
-                            
-                        </div>
+                        <div class="Qualifications2"></div>
                     </div>
                 </div>
             </div>

@@ -60,7 +60,7 @@
 }
 .outputcontainer{
     width:65%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     padding: 1rem;
@@ -150,7 +150,6 @@ select{
     background-color: rgb(179, 179, 223);
     padding: 1rem;
     padding-top: 150px;
-    /* border: 2px solid red; */
 }
 .header{
     position:absolute;
@@ -217,7 +216,7 @@ select{
     flex-direction: column;
     gap: 0.5rem;
     width: 80%;
-    /* height: 100%; */
+    height: 100%;
     background-color: rgb(250, 250, 250);
     box-shadow: 0px 3px 10px 3px rgb(8, 8, 8);
 }
@@ -282,14 +281,7 @@ h3{
 .EducationDtls{
     width: 100%; 
 }
-.ProfessionalExpOne{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem;
-    /* border: 2px solid red; */
-}
-.ProfessionalExpTwo{
+.ProfessionalExp{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -302,7 +294,7 @@ h3{
     flex-direction: column;
     gap: 0.5rem;
 }
-.leftinfoOne, .leftinfoTwo{
+.leftinfo{
     line-height: 2rem;
     font-size: 1.1rem;
 }
@@ -310,56 +302,19 @@ h3{
     display: flex;
     gap: 1rem;
 }
-.AddProjOne, .AddProjTwo{
+.AddProj{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0.2rem;
 }
-.QualificateDtlOne, .QualificateDtlTwo{
+.QualificateDtl{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0.2rem;
 }
 /* -------------------------------------------making responsive--------------------------------- */
-@media (min-width:580px) and (max-width:780px) {
-    .basecontainer{
-        display: flex;
-        flex-direction: column;
-    }
-    .container2{
-        width: 100%;
-        justify-content: center;
-        /* border: 2px solid red; */
-    }
-    .outputcontainer{
-        width: 100%;
-        /* border: 2px solid blue; */
-    }
-}
-@media (max-width:579px) {
-    .basecontainer{
-        display: flex;
-        flex-direction: column;
-    }
-    .container2{
-        width: 100%;
-        /* border: 2px solid red; */
-    }
-    .outputcontainer{
-        width: 100%;
-        padding: 0;
-        /* border: 2px solid blue; */
-    }
-    .outputTypOne{
-        width: 100%;
-    }
-    ::-webkit-scrollbar-thumb{
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-    }
-    button{
-        font-size: 1rem;
-    }
+@media (min-width:270px) and (max-width:760px) {
+
 }
