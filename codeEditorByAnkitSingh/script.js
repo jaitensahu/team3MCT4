@@ -114,7 +114,7 @@ function viewBill() {
   document.getElementById("billContent").appendChild(fieldset);
 
   // Append the generated bill content to the fieldset
-  fieldset.innerHTML += billContent;
+  fieldset.innerHTML = billContent;
 
   document.getElementById("billContent").style.display = "block";
   document.getElementById("qrcode").style.display = "none";
