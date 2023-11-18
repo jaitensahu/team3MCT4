@@ -13,7 +13,6 @@
     background-color: #2874F0;
 }
 .left{
-    /* background-color: rgb(45, 210, 16); */
     margin-left: 200PX;
     margin-right: 15px;
     display: flex;
@@ -102,7 +101,7 @@ button{
     font-size: 18px;
 }
 
-.items-collection{
+.collection{
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -110,26 +109,26 @@ button{
     /* margin-top: 10px; */
     box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.178)
 }
-.items img{
+.Collection-items img{
     width: 65px;
 }
-.items p{
+.Collection-items p{
     font-size: 14px;
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
     display: flex;
 }
-.items{
+.Collection-items{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.items > p > .material-symbols-outlined{
+.Collection-items > p > .material-symbols-outlined{
 font-size: 20px;
 color: black;
 }
-.items:hover, button, .logo-container{
+.Collection-items:hover, button, .logo-container{
     cursor: pointer;
 }
 
@@ -146,16 +145,14 @@ color: black;
     width: 70%;
 }
 
-
-
-.main-body-container{
+.main-Bottom-container{
     display: flex;
     padding:12px;
     gap:12px;
     width: 100%;
 }
 
-.sidebar-divs-container{
+.containerleft{
    width: 18%;
    background-color: white;
    padding:12px ;
@@ -283,13 +280,13 @@ color: black;
 .product_card .rating-container img{
     display: none;
 }
-.fliter-heading{
+.heading{
     font-size: 18px;;
     text-transform: capitalize;
     font-weight: 500;
     color:#212121
 }
-.filter-category-head{
+.price{
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .3px;
@@ -325,6 +322,4 @@ input{
     padding:12px 5px;
     border-bottom: 1px solid #e0dfdf;
 }
-/* #rangePrice{
-    width: 100%;
-} */
+
