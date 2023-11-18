@@ -6,12 +6,15 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
   let btnn = document.querySelector(".costumbtn");
   if (!btnn) {
     let bookmarkBtn = document.createElement("img");
-    bookmarkBtn.src = chrome.runtime.getURL("Assets/786352.png");
-    const btn = document.createElement("button");
-    btn.classList.add("ytp-button");
-    btn.classList.add("costumbtn");
-    btn.appendChild(bookmarkBtn);
-    controls.appendChild(btn);
+    bookmarkBtn.src = chrome.runtime.getURL("Assets/bookmark.png");
+    // const btn = document.createElement("button");
+    
+    bookmarkBtn.classList.add("ytp-button");
+    bookmarkBtn.classList.add("costumbtn");
+    // btn.appendChild(bookmarkBtn);
+    controls.appendChild(bookmarkBtn);
+
+    
     btnn = document.querySelector(".costumbtn");
 
     btnn.addEventListener("click", async () => {

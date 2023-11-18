@@ -23,11 +23,15 @@
     "128": "./Assets/download.png"
   },
 
-  "web_accessible_resource":[
+  "web_accessible_resources": [
     {
-      "resources":["Assets/786352.png"]
+      "resources": ["Assets/bookmark.png"],
+      "matches": ["https://*.youtube.com/*"]
     }
   ],
+
+
+
 
   "action": {
     "default_popup": "popup.html"
