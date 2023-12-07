@@ -1,38 +1,23 @@
-# Invoice Generator
+# Payment Integration
 
 ## Overview
-
-The Invoice Generator is a web application that simplifies the process of creating, reviewing, and downloading invoices. It provides an intuitive interface for users to input invoice details, add bill items, and generate professional-looking invoices with ease.
+Enable easy and secure donations to multiple organizations using the Razorpay payment gateway. This seamless solution allows users to contribute to causes they care about, promoting social impact.
 
 ## Features
+- **Add payment method:** Users can add required details before going to payment options. 
 
-### 1. Dynamic Bill Details
+### 1. Total Section
 
-- **Add Items:** Users can dynamically add bill items, including item name, quantity, and price.
-- **Delete Items:** Each item row comes with a "Delete" button to remove specific items from the bill.
-
-### 2. Total Section
-
-- The application calculates and displays the total number of items and the total amount automatically as users add or remove items.
-
-### 3. Review Invoice
-
-- The "Review Invoice" button allows users to review the entered details before finalizing the invoice.
-
-### 4. Invoice Options
-
-- After reviewing, users can choose from three options:
-  1. **View Bill:** Display a read-only view of the invoice details.
-  2. **Download Bill:** Generate and download the invoice in PDF format.
-  3. **QR Code:** Generate a QR code containing key invoice details.
-
-### 5. Responsive Design
+- The application aacepts the payment with all the payment methods.
+ 
+### 2. Responsive Design
 
 - The application is designed to be responsive across various devices and screen sizes.
 
 ## Hosted Link
 
-The project is hosted at [Invoice Generator](https://geekathonteam3.netlify.app/invoicegeneratorbyankit/)
+
+The project is hosted at [Payment Integration]https://geekathonteam3.netlify.app/paymentintegrationbysatvik/
 
 ## Credits
 
@@ -44,34 +29,24 @@ The project is hosted at [Invoice Generator](https://geekathonteam3.netlify.app/
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- Third-party libraries:
-  - [html2pdf](https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js)
-  - [qrcodejs](https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js)
+
 
 ## How to Use
 
-1. Open the hosted link [Invoice Generator](https://geekathonteam3.netlify.app/invoicegeneratorbyankit/).
-2. Fill in the required invoice details, add bill items, and review the invoice.
-3. Choose an option from "View Bill," "Download Bill," or "QR Code" to perform the desired action.
+1. Open the hosted link [Invoice Generator]https://geekathonteam3.netlify.app/paymentintegrationbysatvik/
+2. Fill in the basic required details like name, address, phone number, etc.
+3. Choose an option from payment option to pay like UPI, Net Banking, Wallet, etc
 
 ## What We've Learned
 
 In the course of developing this project, we gained hands-on experience and knowledge in:
-
 - Integrating datepicker functionality
-- Dynamic manipulation of tables for bill items
-- Generating and displaying QR codes
-- Downloading content as a PDF
+- Integration with Razorpay API
+- Handling secure online transactions
 - Responsive design with media queries
-- Working with third-party libraries for enhanced functionality
 
 ## Future Scope
-
 This project lays the foundation for further enhancements and features. Future improvements could include:
-
-- User authentication and accounts
-- Saving and retrieving invoices
+- Expansion to support more payment gateways
+- Real-time donation tracking and reporting
 - Integration with external payment gateways
-- Enhanced styling and user interface improvements
-- Multi-language support
-- Exporting invoices in different formats (e.g., CSV)
